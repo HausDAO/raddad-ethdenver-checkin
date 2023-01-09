@@ -27,7 +27,7 @@ import { TARGET_DAO } from '../targetDAO';
 import { CheckIn } from '../types';
 
 export const Timeline = () => {
-  const { logs, isLoading } = useCheckInLogs({
+  const { logs, isLoading, failureCount } = useCheckInLogs({
     shamanAddress: TARGET_DAO.SHAMAN,
     chainId: TARGET_DAO.CHAIN_ID,
   });
@@ -36,10 +36,12 @@ export const Timeline = () => {
     return (
       <SingleColumnLayout title="Loading Timeline">
         <Spinner size="12rem" />
+        <ParMd>Fetching data from RPC. This may take longer than usual.</ParMd>
+        <ParMd>{failureCount}/3 Attempts</ParMd>
       </SingleColumnLayout>
     );
   }
-  console.log('logs', logs);
+
   return (
     <SingleColumnLayout title="Work Timeline">
       {logs?.map((log) => {

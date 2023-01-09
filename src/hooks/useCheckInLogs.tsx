@@ -1,7 +1,6 @@
 import { createContract } from '@daohaus/tx-builder';
 import { ValidNetwork } from '@daohaus/keychain-utils';
 import CheckInShamanABI from '../abi/CheckInShaman.json';
-import React from 'react';
 import { useQuery } from 'react-query';
 import { CheckIn } from '../types';
 
