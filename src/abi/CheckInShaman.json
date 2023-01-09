@@ -1,0 +1,96 @@
+[
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      { "type": "address", "name": "", "internalType": "contract IBAAL" }
+    ],
+    "name": "baal",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+    "name": "checkInInterval",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "claim",
+    "inputs": [
+      { "type": "uint32", "name": "_secondsWorked", "internalType": "uint32" },
+      { "type": "string", "name": "_metadata", "internalType": "string" }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "init",
+    "inputs": [
+      { "type": "address", "name": "_baal", "internalType": "address" },
+      { "type": "bool", "name": "_sharesOrLoot", "internalType": "bool" },
+      {
+        "type": "uint256",
+        "name": "_sharesPerSecond",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_checkInInterval",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "bool", "name": "", "internalType": "bool" }],
+    "name": "sharesOrLoot",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+    "name": "sharesPerSecond",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [{ "type": "uint256", "name": "", "internalType": "uint256" }],
+    "name": "timeLedger",
+    "inputs": [{ "type": "address", "name": "", "internalType": "address" }]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      { "type": "address", "name": "", "internalType": "contract IERC20" }
+    ],
+    "name": "token",
+    "inputs": []
+  },
+  {
+    "type": "event",
+    "name": "Claim",
+    "inputs": [
+      { "type": "address", "name": "account", "indexed": false },
+      { "type": "uint256", "name": "timestamp", "indexed": false },
+      { "type": "uint256", "name": "tokenAmountClaimed", "indexed": false },
+      { "type": "uint32", "name": "secondsWorked", "indexed": false },
+      { "type": "string", "name": "metadata", "indexed": false }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Initialized",
+    "inputs": [{ "type": "uint8", "name": "version", "indexed": false }],
+    "anonymous": false
+  }
+]
