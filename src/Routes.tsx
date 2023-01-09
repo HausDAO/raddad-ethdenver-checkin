@@ -3,6 +3,7 @@ import { TXBuilder } from '@daohaus/tx-builder';
 import { Routes as Router, Route, useLocation } from 'react-router-dom';
 import { Claim } from './pages/Claim';
 import { Home } from './pages/Home';
+import { Timeline } from './pages/Timeline';
 import { TARGET_DAO } from './targetDAO';
 
 export const Routes = () => {
@@ -22,12 +23,14 @@ export const Routes = () => {
         pathname={pathname}
         navLinks={[
           { label: 'Home', href: '/' },
-          { label: 'Form Test', href: '/formtest' },
+          { label: 'Timeline', href: '/timeline' },
+          { label: 'Claim', href: '/claim' },
         ]}
       >
         <Router>
           <Route path="/" element={<Home />} />
-          <Route path="/formtest" element={<Claim />} />
+          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/claim" element={<Claim />} />
         </Router>
       </DHLayout>
     </TXBuilder>
