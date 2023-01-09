@@ -1,8 +1,9 @@
 import { EthAddress } from '@daohaus/utils';
+import { ValidNetwork } from '@daohaus/keychain-utils';
 
 export const TARGET_DAO: {
   ID: EthAddress;
-  CHAIN_ID: string;
+  CHAIN_ID: ValidNetwork;
   NAME: string;
   SHAMAN: EthAddress;
 } = {

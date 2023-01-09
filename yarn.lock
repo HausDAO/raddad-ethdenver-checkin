@@ -1225,6 +1225,13 @@
   dependencies:
     tslib "2.4.1"
 
+"@daohaus/keychain-utils@0.1.3", "@daohaus/keychain-utils@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@daohaus/keychain-utils/-/keychain-utils-0.1.3.tgz#afb0125b093d58830cab1e9ede250e5fbae1fc49"
+  integrity sha512-hD6ijCwUl7kIAA0USWhmfbJIiDoFjmbG83gZQ9idnVDpnnlXPWwb1i8ZFFcqA6Q+Ti0KEi5Hz2ZrsGJXZZSSfQ==
+  dependencies:
+    tslib "2.4.1"
+
 "@daohaus/moloch-v3-data@0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@daohaus/moloch-v3-data/-/moloch-v3-data-0.1.1.tgz#8c0fc4f086ab8188af980c17e4287377223502fd"
@@ -1318,6 +1325,20 @@
   integrity sha512-uijyU6q+pBrUsBol6/feLs3+nl37uASq9q9zBOd1U+4+F9p09p1mVLROLmHBG8SgTMZ7GVPONSjM/iycwmBLiw==
   dependencies:
     "@daohaus/keychain-utils" "0.1.1"
+    date-fns "2.29.3"
+    ethers "5.7.2"
+    localforage "1.10.0"
+    numbro "2.3.6"
+    react "18.2.0"
+    react-hook-form "7.39.1"
+    tslib "2.4.1"
+
+"@daohaus/utils@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@daohaus/utils/-/utils-0.1.3.tgz#c0e7e6b0473f79f777410250cd5363e9a522aea6"
+  integrity sha512-9EwKeoxSow2aBXufbI9JsxAMsK9HFTg/mcG0089Gc0nxX5jBqHM/P6KTUduFdLEb6ZFowHXHr6hoVt00lfrSWA==
+  dependencies:
+    "@daohaus/keychain-utils" "0.1.3"
     date-fns "2.29.3"
     ethers "5.7.2"
     localforage "1.10.0"

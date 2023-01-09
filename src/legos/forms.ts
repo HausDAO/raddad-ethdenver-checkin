@@ -27,7 +27,7 @@ export const FORM: Record<string, FormLego> = {
     description:
       'Submit a work claim to redeem DAO shares using a shaman contract. No Proposal required.',
     requiredFields: {
-      secondsWorked: true,
+      time: true,
       morale: true,
       description: true,
       obstacles: true,
