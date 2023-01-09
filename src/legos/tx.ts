@@ -1,4 +1,4 @@
-import { POSTER_TAGS } from '@daohaus/utils';
+import { POSTER_TAGS, TXLego } from '@daohaus/utils';
 import { buildMultiCallTX } from '@daohaus/tx-builder';
 import { CONTRACT } from './contract';
 
@@ -15,7 +15,7 @@ export enum ProposalTypeIds {
   WalletConnect = 'WALLETCONNECT',
 }
 
-export const TX = {
+export const TX: Record<string, TXLego> = {
   POST_SIGNAL: buildMultiCallTX({
     id: 'POST_SIGNAL',
     JSONDetails: {
@@ -48,4 +48,23 @@ export const TX = {
       },
     ],
   }),
+  CHECK_IN: {
+    id: 'CHECK_IN',
+    method: 'claim',
+    contract: CONTRACT.CHECK_IN,
+    args: [
+      '.formValues.timeInSeconds',
+      {
+        type: 'JSONDetails',
+        jsonSchema: {
+          version: { type: 'static', value: 0.1 },
+          memberAddress: '.memberAddress',
+          morale: '.formValues.morale',
+          description: '.formValues.description',
+          obstacles: '.formValues.obstacles',
+          future: '.formValues.future',
+        },
+      },
+    ],
+  },
 };
