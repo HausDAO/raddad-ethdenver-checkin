@@ -1,4 +1,4 @@
-import { FormLego } from '@daohaus/form-builder';
+import { FieldLego, FormLego } from '@daohaus/form-builder';
 import { FIELD } from './fields';
 import { TX } from './tx';
 
@@ -16,6 +16,33 @@ export const FORM: Record<string, FormLego> = {
       FIELD.DESCRIPTION,
       FIELD.LINK,
       // ...PROPOSAL_SETTINGS_FIELDS,
+    ],
+  },
+  CHECK_IN: {
+    id: 'CHECK_IN',
+    tx: TX.CHECK_IN,
+    log: true,
+    title: 'Submit Work Claim',
+    subtitle: 'Work Claim',
+    description:
+      'Submit a work claim to redeem DAO shares using a shaman contract. No Proposal required.',
+    requiredFields: {
+      secondsWorked: true,
+      morale: true,
+      description: true,
+      obstacles: true,
+      future: true,
+    },
+    fields: [
+      FIELD.SECONDS_WORKED,
+      FIELD.MORALE,
+      {
+        ...FIELD.DESCRIPTION,
+        label: 'Work Description',
+        placeholder: 'What did you do?',
+      } as FieldLego,
+      FIELD.OBSTACLES,
+      FIELD.FUTURE,
     ],
   },
 };
