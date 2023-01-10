@@ -11,9 +11,6 @@ import {
   TintSecondary,
 } from '@daohaus/ui';
 import {
-  formatDateFromSeconds,
-  formatDateTimeFromSeconds,
-  formatLongDateFromSeconds,
   formatPeriods,
   formatShortDateTimeFromSeconds,
   formatValueTo,
@@ -54,15 +51,7 @@ export const Timeline = () => {
 const ClaimCard = styled(Card)`
   width: 100%;
   margin-bottom: 2rem;
-  .space {
-    margin-bottom: 2rem;
-  }
-  .sm-space {
-    margin-bottom: 1rem;
-  }
-  .xs-space {
-    margin-bottom: 0.5rem;
-  }
+
   .uppercase {
     text-transform: uppercase;
   }
@@ -86,12 +75,12 @@ const Log = ({
 
   return (
     <ClaimCard>
-      <ParSm className="sm-space">
+      <ParSm className="mb-sm">
         <TintSecondary>
           {formatShortDateTimeFromSeconds(timeStamp)}
         </TintSecondary>
       </ParSm>
-      <ParLg className="space">
+      <ParLg className="mb-md">
         {truncateAddress(memberAddress)} claimed{' '}
         {formatValueTo({
           value: fromWei(tokenAmountClaimed),
@@ -100,25 +89,25 @@ const Log = ({
         })}{' '}
         shares for {formatPeriods(secondsWorked)} worked
       </ParLg>
-      <Button onClick={toggleShowMore} variant="link" className="space">
+      <Button onClick={toggleShowMore} variant="link" className="mb-md">
         {showMore ? 'Hide Details' : 'Show Details'}
       </Button>
       {showMore && (
         <>
-          <ParXs className="uppercase xs-space">Morale:</ParXs>
-          <ParMd className="space">
+          <ParXs className="uppercase mb-xs">Morale:</ParXs>
+          <ParMd className="mb-md">
             <TintSecondary>{morale}</TintSecondary>
           </ParMd>
-          <ParXs className="uppercase xs-space">Work Description:</ParXs>
-          <ParMd className="space">
+          <ParXs className="uppercase mb-xs">Work Description:</ParXs>
+          <ParMd className="mb-md">
             <TintSecondary>{description}</TintSecondary>
           </ParMd>
-          <ParXs className="uppercase xs-space">Obstacles:</ParXs>
-          <ParMd className="space">
+          <ParXs className="uppercase mb-xs">Obstacles:</ParXs>
+          <ParMd className="mb-md">
             <TintSecondary>{obstacles}</TintSecondary>
           </ParMd>
-          <ParXs className="uppercase xs-space">Future:</ParXs>
-          <ParMd className="space">
+          <ParXs className="uppercase mb-xs">Future:</ParXs>
+          <ParMd className="mb-md">
             <TintSecondary>{future}</TintSecondary>
           </ParMd>
         </>
