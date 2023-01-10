@@ -4,7 +4,6 @@ import {
   ParLg,
   ParMd,
   ParSm,
-  ParXl,
   ParXs,
   SingleColumnLayout,
   Spinner,
@@ -51,10 +50,6 @@ export const Timeline = () => {
 const ClaimCard = styled(Card)`
   width: 100%;
   margin-bottom: 2rem;
-
-  .uppercase {
-    text-transform: uppercase;
-  }
 `;
 
 const Log = ({

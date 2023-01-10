@@ -30,7 +30,7 @@ export const Home = () => {
         <ParMd className="mb-xl">
           This app uses a CheckIn Shaman to handle fast easy claims.{' '}
         </ParMd>
-        <ShamanDataDisplay />
+        {/* <ShamanDataDisplay /> */}
       </ClaimsDescription>
     </SingleColumnLayout>
   );
