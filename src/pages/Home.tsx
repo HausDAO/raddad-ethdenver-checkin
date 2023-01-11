@@ -21,12 +21,10 @@ const ClaimsDescription = styled.div`
 `;
 
 export const Home = () => {
-  const { address } = useDHConnect();
-
   return (
     <SingleColumnLayout>
       <ClaimsDescription>
-        <H2 className="mb-md">DAOMasons Claims App</H2>
+        <H2 className="mb-md">{TARGET_DAO.NAME}</H2>
         <ParMd className="mb-xl">
           This app uses a CheckIn Shaman to handle fast easy claims.{' '}
         </ParMd>

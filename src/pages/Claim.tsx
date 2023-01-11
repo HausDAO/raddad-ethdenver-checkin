@@ -1,7 +1,4 @@
-import { useDHConnect } from '@daohaus/connect';
 import { FormBuilder } from '@daohaus/form-builder';
-import { TXBuilder } from '@daohaus/tx-builder';
-import { Button } from '@daohaus/ui';
 import { useQueryClient } from 'react-query';
 
 import { FORM } from '../legos/forms';

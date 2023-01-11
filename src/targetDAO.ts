@@ -7,8 +7,8 @@ export const TARGET_DAO: {
   NAME: string;
   SHAMAN: EthAddress;
 } = {
-  ID: '0xddd21798f65b0f3d79929446039f70b3a5641527',
+  ID: '0xe03c08245551163ddbd7361ad1c3f56a8f63db8a',
   CHAIN_ID: '0x64',
-  NAME: 'Test Masons Project',
-  SHAMAN: '0x8d53663810824716b2baDBc9B5f486b36C13e4bE',
+  NAME: 'RadDad Lads - Eth Denver Hack',
+  SHAMAN: '0xae487435dCF82C764526f7f8805518d8E8b27677',
 };
