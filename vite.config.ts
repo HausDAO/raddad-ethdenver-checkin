@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   define: {
     'process.env': {
-      NODE_ENV: '16.6.0',
+      NODE_VERSION: '16.6.0',
     },
   },
 });

@@ -10,16 +10,12 @@ import { TARGET_DAO } from '../targetDAO';
 export const Claim = () => {
   const client = useQueryClient();
   return (
-    <>
-      <Button onClick={() => client.clear()}>Clear Cache</Button>
-
-      <FormBuilder
-        form={FORM.CHECK_IN}
-        targetNetwork={TARGET_DAO.CHAIN_ID}
-        onSuccess={() => {
-          client.clear();
-        }}
-      />
-    </>
+    <FormBuilder
+      form={FORM.CHECK_IN}
+      targetNetwork={TARGET_DAO.CHAIN_ID}
+      onSuccess={() => {
+        client.clear();
+      }}
+    />
   );
 };
